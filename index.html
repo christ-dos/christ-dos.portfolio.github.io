@@ -131,12 +131,6 @@
 								<header>
 									<h2>Contactez Moi</h2>
 								</header>
-								<script language="javascript" type="text/javascript">
-								function recuperation(){
-   								 document.getElementById('form').action = "mailto:christine_dos_santos@hotmail.fr?subject=" + document.getElementById('sujet')
-									.value + "&body=" + "Nom : " + document.getElementById('nom').value + "%0A" + "Email Expéditeur : " + document.getElementById('email').value + "%0A" + "Message: "  + document.getElementById('message').value;
-								}
-								</script>
 								<form action="https://formspree.io/f/xeqnkpzy" method="post"  id="form">
 									<div>
 										<div class="row">
@@ -158,53 +152,8 @@
 										</div>
 									</div>
 								</form>
-								<!--<form action="javascript:recuperation()" method="get" enctype="text/plain" id="form">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" id="nom" placeholder="Nom" required/>
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="email" name="email"  id="email" placeholder="Email" required/>
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" id="sujet" placeholder="Sujet" required/>
-											</div>
-											<div class="col-12">
-												<textarea name="message"  id="message" placeholder="Message" rows="6" required></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Envoyer" />
-											</div>
-										</div>
-									</div>
-								</form>-->
-							<!--	<script language="javascript" type="text/javascript">
-									function sendMail() {
-										//Tester les donnees
-										if (document.getElementById("email").value.length==0) {
-											alert("Saisir l'adresse du destinataire !!!");
-											return;
-										}
-										if (document.getElementById("subject").value.length==0) {
-											alert("Saisir le titre !!!");
-											return;
-										}
-										if (document.getElementById("message").value.length==0) {
-											alert("Ecrire le message !!!");
-											return;
-										}						
-										//Encoder l'url mailto
-										var url="mailto:christine_dos_santos@hotmail.fr"
-											+"?subject="+encodeURIComponent(document.getElementById("subject").value)
-											+"&body="+encodeURIComponent(document.getElementById("message").value);
-										//Ouvrir client messagerie
-										document.location=url;
-									}
-			
-								</script>-->
+							
 							</article>
-
 					</div>
 
 				<!-- Footer -->
