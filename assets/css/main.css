@@ -11,10 +11,10 @@
 {
 	font-family:'Gondola_SD-Swash';
 
- 	src:url('polices/gondola_sd-swash-webfont.eot') format('eot'),
- 	 	url('polices/gondola_sd-swash-webfont.woff') format('woff'),
- 	 	url('polices/Gondola_SD-Swash.ttf') format('truetype'),
- 	 	url('polices/gondola_sd-swash-webfont.svg') format('svg');
+ 	src:url('/polices/gondola_sd-swash-webfont.eot') format('eot'),
+ 	 	url('/polices/gondola_sd-swash-webfont.woff') format('woff'),
+ 	 	url('/polices/Gondola_SD-Swash.ttf') format('truetype'),
+ 	 	url('/polices/gondola_sd-swash-webfont.svg') format('svg');
 
 }
 
@@ -1402,13 +1402,17 @@ input, select, textarea {
 	.descriptif_image{
 		font-size: 0.5em;
 		color: #0ADDFF;
-		padding-left: 25px; 
-	}	
+		padding-left: 25px;
+		background-color: rgb(236, 217, 217);
+		font-weight: 400;
+	}
+	.descriptif_projet{
+		font-size: 0.8em;
+	}
 
 	.image.fit{
 		text-decoration: none;
-		background-color: rgb(236, 217, 217);
-
+		box-shadow: 5px 5px 5px rgb(182, 139, 139);
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1461,9 +1465,107 @@ input, select, textarea {
 	}
 /* *******couleur du paragraphe sous le titre Réalisations*******/
 	p, ul, ol, dl, table, blockquote, form {
-		margin-bottom: 2em;
+		margin-bottom: 0.3em;
 		color: rgb(154,78,78);
+		line-height: 1.3em;
+		list-style: none;
 	}
+
+	@keyframes word_developpement_logiciel {
+		from {color: rgb(154,78,78);font-weight: bold; font-size: 16px}
+		to {color: #0ADDFF;font-weight: bold; font-size: 17px}
+	}
+
+	@keyframes icones_animations {
+		from { opacity: 100%}
+		to { opacity: 0%}
+	}
+
+	.list_technos, .list_projet{
+		list-style: none;
+	}
+
+/*******animations**************/
+	.span_developpement_logiciel{
+		animation-name: word_developpement_logiciel;
+		animation-duration: 2s;
+		animation-delay: 0.1s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	.icons_java{
+		opacity: 100%;
+		position: relative;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: unset;
+	}
+
+	.icons_html{
+		opacity: 100%;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 0.3s;
+		animation-iteration-count: 2;
+		animation-direction: unset;
+	}
+
+	.icons_sql{
+		opacity: 100%;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 0.6s;
+		animation-iteration-count: 3;
+		animation-direction: unset;
+	}
+
+	.icons_spring{
+		opacity: 100%;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 0.9s;
+		animation-iteration-count: 4;
+		animation-direction: unset;
+	}
+
+	.icons_docker{
+		opacity: 100%;
+		position: relative;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 1.2s;
+		animation-iteration-count: 5;
+		animation-direction: unset;
+	}
+
+	.icons_angular{
+		opacity: 100%;
+		position: relative;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 1.5s;
+		animation-iteration-count: 6;
+		animation-direction: unset;
+	}
+
+	.icons_git{
+		opacity: 100%;
+		position: relative;
+		animation-name: icones_animations;
+		animation-duration: 2s;
+		animation-delay: 1.8s;
+		animation-iteration-count: 7;
+		animation-direction: unset;
+	}
+
+	.descriptif_realisations p, ul{
+		color: rgb(154,78,78);
+		font-size: 0.9em;
+	}
+
 
 /* Table */
 
@@ -1604,10 +1706,63 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 		}
 
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
+		.image.centered img {
+			margin: 0 auto;
+			width: auto;
+		}
+
+		.cover_div{
+			width: 90%;
+			margin: auto;
+			margin-bottom: 15px;
+			margin-top: 20px;
+		}
+
+		.img_couverture {
+			width: 40%;
+			margin: auto;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		#lien_flaticon{
+			font-size: 0.6em;
+		}
+
+		.calcul_abatement_demo{
+			margin-top: 15px;
+			width: 350px;
+			display: block;
+			padding-top: 0px;
+		}
+
+		[data-md-tooltip] {
+			position: relative;
+		}
+
+		[data-md-tooltip]:before {
+			content: attr(data-md-tooltip);
+			position: absolute;
+			top: -3px;
+			left: 20%;
+			padding-left: 5px;
+			padding-right: 5px;
+			transform: translateX(-50%) scale(0);
+			transition: transform 0.3s ease-in-out;
+			transform-origin: top;
+			background-color: #0ADDFF;
+			color: rgb(236, 217, 217);
+			border-radius: 8px;
+			border: 1px solid white;
+			box-shadow: 1px 1px 3px white;
+			font-size: 0.5em;
+			font-family: Roboto, sans-serif;
+			font-weight: 400;
+			z-index: 6;
+		}
+		[data-md-tooltip]:hover:before {
+			transform: translateX(-50%) scale(1);
+		}
 
 /* Button */
 
