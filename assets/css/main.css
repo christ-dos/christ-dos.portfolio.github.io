@@ -1338,7 +1338,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/********** Le texte dans les champs du formulaire******* */
+/********** Le texte dans les champs du formulaire ******* */
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
@@ -1378,7 +1378,7 @@ input, select, textarea {
 			}
 
 		}
-/* ****************titre  Réalisations*******************/
+/* **************** Titre  Réalisations *******************/
 	strong, b, h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
 		color: #0ADDFF;
@@ -1465,7 +1465,7 @@ input, select, textarea {
 	br.clear {
 		clear: both;
 	}
-/* *******couleur du paragraphe sous le titre Réalisations*******/
+/* ******* Couleur du paragraphe sous le titre Réalisations *******/
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 0.3em;
 		color: rgb(154,78,78);
@@ -1473,6 +1473,7 @@ input, select, textarea {
 		list-style: none;
 	}
 
+/************** Animations **************/
 	@keyframes word_developpement_logiciel {
 		from {color: rgb(154,78,78);font-weight: bold; font-size: 16px}
 		to {color: #0ADDFF;font-weight: bold; font-size: 17px}
@@ -1482,12 +1483,6 @@ input, select, textarea {
 		from { opacity: 100%}
 		to { opacity: 0%}
 	}
-
-	.list_technos, .list_projet{
-		list-style: none;
-	}
-
-/*******animations**************/
 	.span_developpement_logiciel{
 		animation-name: word_developpement_logiciel;
 		animation-duration: 2s;
@@ -1562,12 +1557,6 @@ input, select, textarea {
 		animation-iteration-count: 7;
 		animation-direction: unset;
 	}
-
-	.descriptif_realisations p, ul{
-		color: rgb(154,78,78);
-		font-size: 0.9em;
-	}
-
 
 /* Table */
 
@@ -1676,6 +1665,16 @@ input, select, textarea {
 
 		}
 
+	.list_technos, .list_projet{
+		list-style: none;
+	}
+
+	.descriptif_realisations p, ul{
+		color: rgb(154,78,78);
+		font-size: 0.9em;
+	}
+
+
 /* Image */
 
 	.image {
@@ -1713,58 +1712,59 @@ input, select, textarea {
 			width: auto;
 		}
 
-		.cover_div{
-			width: 90%;
-			margin: auto;
-			margin-bottom: 15px;
-			margin-top: 20px;
-		}
+	.cover_div{
+		margin: auto;
+		margin-bottom: 15px;
+		margin-top: 25px;
+	}
 
-		.img_couverture {
-			width: 30%;
-			margin: auto;
-			margin-bottom: 10px;
-			margin-top: 10px;
-		}
+	.img_couverture {
+		width: 30%;
+		margin: auto;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
 
-		#lien_flaticon{
-			font-size: 0.6em;
-		}
+	#lien_flaticon {
+		font-size: 0.6em;
+	}
 
-		.calcul_abatement_demo{
-			margin-top: 15px;
-			width: 350px;
-			display: block;
-			padding-top: 0px;
-		}
+	.calcul_abatement_demo{
+		margin-top: 15px;
+		width: 350px;
+		display: block;
+		padding-top: 0px;
+		box-shadow: 5px 5px 5px rgb(182, 139, 139);
+	}
 
-		[data-md-tooltip] {
-			position: relative;
-		}
+	[data-md-tooltip] {
+		position: relative;
+	}
 
-		[data-md-tooltip]:before {
-			content: attr(data-md-tooltip);
-			position: absolute;
-			top: -3px;
-			left: 20%;
-			padding-left: 5px;
-			padding-right: 5px;
-			transform: translateX(-50%) scale(0);
-			transition: transform 0.3s ease-in-out;
-			transform-origin: top;
-			background-color: #0ADDFF;
-			color: rgb(236, 217, 217);
-			border-radius: 8px;
-			border: 1px solid white;
-			box-shadow: 1px 1px 3px white;
-			font-size: 0.5em;
-			font-family: Roboto, sans-serif;
-			font-weight: 400;
-			z-index: 6;
-		}
-		[data-md-tooltip]:hover:before {
-			transform: translateX(-50%) scale(1);
-		}
+	[data-md-tooltip]:before {
+		content: attr(data-md-tooltip);
+		position: absolute;
+		top: -3px;
+		left: 20%;
+		padding-left: 5px;
+		padding-right: 5px;
+		transform: translateX(-50%) scale(0);
+		transition: transform 0.3s ease-in-out;
+		transform-origin: top;
+		background-color: #0ADDFF;
+		color: rgb(236, 217, 217);
+		border-radius: 8px;
+		border: 1px solid white;
+		box-shadow: 1px 1px 3px white;
+		font-size: 0.5em;
+		font-family: Roboto, sans-serif;
+		font-weight: 400;
+		z-index: 6;
+	}
+
+	[data-md-tooltip]:hover:before {
+		transform: translateX(-50%) scale(1);
+	}
 
 /* Button */
 
@@ -2274,14 +2274,14 @@ input, select, textarea {
 					margin-bottom: 0;
 					width: 100%;
 				}
-/*****************Titre avec nom page intro ********************/
+/***************** Titre avec nom page intro ********************/
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
 						color: rgb(154, 78, 78);
 					}
 
-/************************paragarphe sous le nom page intro *********/
+/************************ Paragarphe sous le nom page intro *********/
 					#main > .panel.intro header p {
 						letter-spacing: -0.015em;
 						font-size: 1.25em;
@@ -2353,6 +2353,7 @@ input, select, textarea {
 		#footer .copyright {
 			list-style: none;
 			padding-left: 0;
+			color: #f6cbcb;
 		}
 
 			#footer .copyright li {
